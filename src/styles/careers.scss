@@ -1,0 +1,139 @@
+.careers__motivation__wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 20em;
+}
+.careers__motivation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1366px;
+  padding: 7em 2em;
+  margin: 0 auto;
+  padding-bottom: 5em;
+}
+.careers__motivation__content {
+  width: 30%;
+}
+.careers__motivation__content__heading {
+  font-size: 45px;
+  display: flex;
+  margin-top: -2em;
+  flex-direction: column;
+  margin-bottom: 0.5em;
+}
+.careers__motivation__content__heading > span {
+  color: var(--primary);
+}
+.careers__motivation__entry {
+  width: 30%;
+  border-radius: 10px;
+  border: 1px solid #bdbdbd;
+  padding: 2.5em;
+  min-height: 280px;
+  margin-bottom: 3.5em;
+  position: relative;
+  outline: 2px solid transparent;
+  transition: 300ms ease-in-out;
+}
+.careers__motivation__entry__icon {
+  position: absolute;
+  padding: 0 0.5em;
+  background-color: white;
+  top: -40px;
+  left: 20px;
+}
+.careers__motivation__entry__icon svg {
+  width: 80px;
+}
+.careers__motivation__entry__heading {
+  font-size: 20px;
+  margin: 0.5em 0;
+  margin-top: 1em;
+}
+.careers__motivation__entry:hover {
+  transition: 300ms ease-in-out;
+  border-color: var(--primary);
+  outline-color: var(--primary);
+}
+@media (max-width: 1440px) {
+  .careers__motivation__content__heading,
+  .services__how__we__do__it__heading {
+    font-size: 35px;
+  }
+}
+@media (max-width: 1366px) {
+  .blog__motivation {
+    width: calc(100% - 4em);
+    margin: 0 2em;
+    margin-top: 6em;
+  }
+}
+@media (max-width: 1000px) {
+  .careers__motivation {
+    padding-bottom: 0;
+  }
+  .careers__motivation__content {
+    width: 48%;
+  }
+  .careers__motivation__entry {
+    width: 48%;
+    min-height: 320px;
+  }
+}
+@media (max-width: 900px) {
+  .services__how__we__do__it__content {
+    justify-content: center;
+  }
+  .services__how__we__do__it__content__entry {
+    width: 48%;
+    margin: 1%;
+  }
+  .services__how__we__do__it__content__entry:last-child {
+    margin-top: 3em;
+  }
+  .services__how__we__do__it__content__entry__icon::after {
+    display: none;
+  }
+  .services__how__we__do__it__content__entry__card__heading {
+    font-size: 20px;
+  }
+}
+@media (max-width: 800px) {
+  .careers__motivation__content {
+    width: 100%;
+    margin-bottom: 5em;
+  }
+  .careers__motivation__content__heading {
+    margin-top: 0;
+    text-align: center;
+  }
+  .careers__motivation__content__info {
+    text-align: center;
+  }
+  .careers__motivation__entry {
+    width: 100%;
+    min-height: fit-content;
+  }
+}
+@media (max-width: 650px) {
+  .services__how__we__do__it__content__entry {
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+  }
+  .services__how__we__do__it__content__entry:nth-child(2) {
+    margin-top: 3em;
+  }
+  .frequently__asked__question__conatiner__right__overlay__heading {
+    max-width: 70%;
+    margin-left: 0;
+  }
+}
+@media (max-width: 600px) {
+  .careers__motivation__content__heading {
+    font-size: 25px;
+  }
+}

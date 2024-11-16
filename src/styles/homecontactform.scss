@@ -1,0 +1,309 @@
+.form-control {
+  position: relative;
+  margin: 20px 0;
+  width: 100%;
+}
+.form-control__rtl {
+  position: relative;
+  margin: 20px 0;
+  width: 100%;
+}
+.form-control p {
+  position: absolute;
+  top: -12px;
+  right: 0;
+  font-size: 14px;
+  color: red;
+}
+.form-control__rtl p {
+  position: absolute;
+  top: -12px;
+  right: 0;
+  font-size: 14px;
+  color: red;
+}
+.rtl .form-control input {
+  text-align: right;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.form-control input {
+  border: 0;
+  border-bottom: 2px solid black;
+  background-color: transparent;
+  padding: 15px 0;
+  display: block;
+  font-size: 18px;
+  width: 100%;
+  transition: 0.1s ease-in;
+}
+.form-control__rtl input {
+  border: 0;
+  border-bottom: 2px solid black;
+  background-color: transparent;
+  padding: 15px 0;
+  display: block;
+  font-size: 18px;
+  text-align: right !important;
+  width: 100%;
+  transition: 0.1s ease-in;
+}
+.form-control input:focus,
+.form-control input:valid,
+.form-control__rtl input:focus,
+.form-control__rtl input:valid {
+  border-bottom-color: var(--primary);
+  outline: none;
+}
+.form-control input:focus + label span,
+.form-control input:valid + label > span {
+  color: var(--primary);
+  transform: translateY(-30px);
+}
+.form-control__rtl input:focus + label span,
+.form-control__rtl input:valid + label > span {
+  color: var(--primary);
+  transform: translateY(-30px);
+}
+.form-control__rtl label {
+  position: absolute;
+  top: 15px;
+  right: 0 !important;
+  z-index: -1;
+}
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0 !important;
+  z-index: -1;
+}
+.form-control label > span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  color: black;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.form-control__rtl label > span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  color: black;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.rtl .boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.boxes {
+  margin: auto;
+  margin-top: 40px;
+}
+.boxes p {
+  font-size: 14px;
+  color: red;
+  text-align: right;
+}
+input[type="checkbox"] {
+  display: none;
+}
+.rtl input[type="checkbox"] + label {
+  padding-left: 0;
+  padding-right: 35px;
+}
+input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  text-align: left;
+  font-size: 18px;
+  padding-left: 35px;
+  margin-bottom: 20px;
+  color: black;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+input[type="checkbox"] + label:last-child {
+  margin-bottom: 0;
+}
+.rtl input[type="checkbox"] + label:before {
+  right: 0;
+  left: auto;
+}
+input[type="checkbox"] + label:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--primary);
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.6;
+  -webkit-transition:
+    all 0.12s,
+    border-color 0.08s;
+  transition:
+    all 0.12s,
+    border-color 0.08s;
+}
+.rtl input[type="checkbox"]:checked + label:before {
+  right: 5px;
+  left: auto;
+}
+input[type="checkbox"]:checked + label:before {
+  width: 10px;
+  top: -5px;
+  left: 5px;
+  border-radius: 0;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.home__contact__form__container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.home__contact__form__container__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1366px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.rtl .home__contact__form__container__content__heading {
+  text-align: right;
+}
+.home__contact__form__container__content__heading {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: left;
+  color: black;
+}
+.home__contact__form__container__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 1000px;
+  margin-bottom: -5px;
+}
+.home__contact__form__container__img img {
+  width: 100%;
+  height: 100%;
+  max-height: 1000px;
+  object-fit: cover;
+}
+.home__contact__form__container__content__card {
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 30px;
+  width: 50%;
+  background: #ffffffba;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px #0000001a;
+  backdrop-filter: blur(6.4px);
+  -webkit-backdrop-filter: blur(6.4px);
+  border: 1px solid #ffffff78;
+}
+.home__contact__form__container__content__button {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em;
+}
+.home__contact__form__container__content__button button {
+  font-size: 18px;
+  background: linear-gradient(
+    to bottom,
+    var(--primary) 0%,
+    var(--primary) 100%
+  );
+  color: white;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 5px 10px #00000033;
+  transition: all 0.3s;
+  margin-top: 0;
+}
+.home__contact__form__container__content__button p {
+  font-size: 18px;
+  color: var(--primary);
+  margin-bottom: 1em;
+}
+.home__contact__form__container__content__button button::before {
+  display: none;
+}
+.home__contact__form__container__content__button button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px #0000004d;
+}
+.home__contact__form__container__content__button button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 5px #00000033;
+}
+.home__contact__form__container__content__button button > span {
+  display: block;
+  margin-left: 0.4em;
+  transition: all 0.3s;
+  font-size: 20px;
+}
+.home__contact__form__container__content__button button svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+  transition: all 0.3s;
+}
+.home__contact__form__container__content__button button .svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ffffff33;
+  margin-right: 0.5em;
+  transition: all 0.3s;
+}
+.home__contact__form__container__content__button button:hover .svg-wrapper {
+  background-color: #ffffff80;
+}
+.home__contact__form__container__content__button button:hover svg {
+  transform: rotate(45deg);
+}
+@media (max-width: 1024px) {
+  .home__contact__form__container__img {
+    height: calc(800px - 5vw);
+  }
+  .home__contact__form__container__img img {
+    width: 100%;
+    height: 100%;
+    max-height: 1000px;
+    object-fit: cover;
+  }
+  .home__contact__form__container__content {
+    padding: 2em;
+  }
+  .home__contact__form__container__content__card {
+    width: 100%;
+  }
+}

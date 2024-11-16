@@ -1,0 +1,224 @@
+.society__section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 2em;
+}
+.society__section__container {
+  background: url("../assets/society.webp") no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.society__section__container__content {
+  display: flex;
+  max-width: 1366px;
+  width: 100%;
+  padding: 4em;
+}
+.society__section__left {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.society__section__left img {
+  width: 100%;
+}
+.society__section__left::after {
+  content: "";
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  height: 110%;
+  width: 110%;
+  border-radius: 50%;
+  border: 1px solid #ffffff4d;
+  z-index: 999;
+  animation: society__section__left 1.1s infinite;
+}
+.society__section__left::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  height: 120%;
+  width: 120%;
+  border-radius: 50%;
+  border: 1px solid #0000000d;
+  z-index: -2;
+  animation: society__section__left 1s infinite;
+}
+@keyframes society__section__left {
+  0% {
+    scale: 0.9;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+.society__section__left__img {
+  display: flex;
+  border-radius: 400px;
+}
+.button button-with-animation {
+  font-size: 14px;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 100px;
+  padding: 0.7em 1.5em;
+  margin-top: -1.5em;
+}
+.button {
+  font-family: inherit;
+  position: relative;
+  padding: 0.7em 1.5em;
+  min-width: 380px;
+  border-radius: 100px;
+  border: 1px solid var(--primary);
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: -1.5em;
+  background: var(--primary);
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 30px 5px var(--primary);
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  display: flex;
+  align-items: center;
+}
+.button::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+  animation: sh02 0.7s 0s linear infinite;
+}
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.button:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.5s ease-in;
+  -moz-transition: box-shadow 0.5s ease-in;
+  transition: box-shadow 0.5s ease-in;
+}
+.rtl .society__section__right {
+  text-align: right;
+}
+.society__section__right {
+  width: 65%;
+  padding: 4em;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.rtl .society__section__right__heading {
+  justify-content: flex-end;
+  margin-bottom: 0.5em;
+}
+.society__section__right__heading {
+  display: flex;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.society__section__right__heading span {
+  color: var(--primary);
+  font-size: 25px;
+  margin-bottom: 0.5em;
+}
+.society__section__right__text {
+  font-size: 18px;
+  margin: 1em 0;
+  color: white;
+}
+.container__bold__text {
+  font-weight: bold;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+@media (max-width: 1250px) {
+  .society__section__container__content {
+    padding: 2em;
+  }
+}
+@media (max-width: 980px) {
+  .society__section__container__content {
+    padding: 0 1em;
+  }
+}
+@media (max-width: 800px) {
+  .society__section__container__content {
+    flex-direction: column;
+    align-items: center;
+    padding: 4em 2em 2em;
+  }
+  .society__section__left {
+    width: 80%;
+  }
+  .society__section__left__text {
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 100px;
+    padding: 0.7em 1.5em;
+    margin-top: -1.5em;
+  }
+  .society__section__right {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 3em 1em 2em;
+  }
+  .society__section__right__text {
+    font-size: 15px;
+  }
+  .society__section__right__heading {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+  }
+}
+@media (max-width: 600px) {
+  .society__section__container__content {
+    padding: 4em 1em 2em;
+  }
+}

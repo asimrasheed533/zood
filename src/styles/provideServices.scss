@@ -1,0 +1,124 @@
+.service__provider__section__back {
+  background-color: #00000094;
+  height: 350px;
+  position: relative;
+}
+.service__provider__section__back__gif {
+  background-image: url("https://res.cloudinary.com/dsxbqyjwo/image/upload/q_50/v1705063475/gif003_zqrxen.gif");
+}
+.service__provider__section {
+  display: flex;
+  position: relative;
+  margin: 3em auto 5em;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 1em 0;
+}
+.service__provider__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: -22em auto 0;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.service__provider__container__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2em;
+  text-align: left;
+}
+.service__provider__section__card__img {
+  display: flex;
+  justify-content: center;
+  margin-top: -3em;
+  position: relative;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.service__provider__section__card:hover .service__provider__section__card__img {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+.service__provider__section__heading {
+  display: flex;
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 2.5em 0 2em;
+  justify-content: center;
+  position: relative;
+}
+.service__provider__section__cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.service__provider__section__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f6f6f6;
+  padding: 1em 1em 1.3em;
+  width: 23%;
+}
+.service__provider__section__card__heading {
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  margin: 1em 0 0.8em;
+}
+.rtl .service__provider__section__card__heading {
+  justify-content: end;
+}
+.service__provider__section__card__text {
+  display: flex;
+  font-size: 16px;
+  color: black;
+}
+.rtl .service__provider__section__card__text {
+  text-align: right;
+}
+.service__provider__section__card:hover {
+  background-color: var(--primary);
+}
+.service__provider__section__card:hover
+  .service__provider__section__card__heading,
+.service__provider__section__card:hover
+  .service__provider__section__card__text {
+  color: white;
+}
+@media (max-width: 1150px) {
+  .service__provider__section__card {
+    width: 40%;
+    margin-bottom: 3em;
+  }
+}
+@media (max-width: 830px) {
+  .service__provider__section__card {
+    width: 45%;
+  }
+  .service__provider__section__heading {
+    font-size: 30px;
+    margin-bottom: 3em;
+  }
+  .service__provider__section__card__heading {
+    text-align: center;
+    justify-content: center;
+  }
+  .service__provider__section__card__text {
+    text-align: center;
+  }
+}
+@media (max-width: 620px) {
+  .service__provider__section__card {
+    width: 90%;
+  }
+}

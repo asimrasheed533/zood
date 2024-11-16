@@ -1,0 +1,36 @@
+.ourpartners__container__content__heading {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1em;
+}
+.ourpartners__container__gif {
+  background-image: url("https://res.cloudinary.com/dsxbqyjwo/image/upload/q_50/v1705063629/gif006_hjbvmn.gif");
+}
+.ourpartners__container {
+  background-color: #000000cc;
+}
+.ourpartners__container__content {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 7em 2em;
+}
+.ourpartners__container__content__swiper__card {
+  display: flex;
+  flex-direction: column;
+}
+.ourpartners__container__content__swiper__card__img {
+  background-size: contain;
+  opacity: 81%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.ourpartners__container__content__swiper__card__text {
+  font-size: 18px;
+  color: white;
+  text-align: left;
+  padding: 0 0 1em;
+}
+.rtl .ourpartners__container__content__swiper__card__text {
+  text-align: right;
+}

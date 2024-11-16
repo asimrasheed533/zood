@@ -1,0 +1,303 @@
+$bookAngle: 60deg;
+$speed: 5s;
+$borderColor: #555;
+$images: url("https://res.cloudinary.com/di11ome0s/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1707534351/zood/13%D8%B2%D9%88%D8%AF_su80b3.webp"),
+  url("https://res.cloudinary.com/di11ome0s/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1707534351/zood/16%D8%B2%D9%88%D8%AF_kkvc2x.webp"),
+  url("https://res.cloudinary.com/di11ome0s/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1707534338/zood/2_%D8%B2%D9%88%D8%AF_j6tbfb.webp"),
+  url("https://res.cloudinary.com/di11ome0s/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1707534343/zood/%D8%A7%D9%84%D9%83%D8%B9%D9%83%D9%8A%D8%A9_fnhhs7.webp"),
+  url("https://res.cloudinary.com/di11ome0s/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1707534370/zood/%D8%A7%D9%84%D9%84%D9%8A%D9%88%D8%A7%D9%86_%D9%88_%D8%B9%D9%83%D8%A7%D8%B8_ovuasm.webp"),
+  url("https://res.cloudinary.com/di11ome0s/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1707534354/zood/%D8%A7%D9%84%D9%86%D8%AE%D8%A8%D8%A9_jqqxth.webp");
+
+.forthsectioncontainer {
+  position: relative;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 2em;
+  border-radius: 4px;
+  height: 690px;
+  margin-top: -50px;
+  z-index: 6;
+}
+.title {
+  top: 45px;
+  left: 0;
+  width: 100%;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1;
+}
+.credit {
+  top: 100%;
+  left: 0;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+  color: black !important;
+  margin-bottom: 1em;
+}
+.book {
+  position: relative;
+  perspective: 630px;
+  perspective-origin: center 50px;
+  transform: scale(1.5);
+  filter: drop-shadow(0 10px 5px #00000040);
+}
+.page {
+  width: 210px;
+  height: 300px;
+  background-color: #bbb;
+  position: absolute;
+  top: 0;
+  right: 50%;
+  transform-origin: 100% 100%;
+  border: solid $borderColor 2px;
+  background-size: 420px 300px;
+  background-position: center;
+  transform-style: preserve-3d;
+  &:nth-child(1) {
+    transform: rotateX($bookAngle) rotateY(3deg);
+  }
+  &:nth-child(2) {
+    transform: rotateX($bookAngle) rotateY(4.5deg);
+  }
+  &:nth-child(3) {
+    transform: rotateX($bookAngle) rotateY(6deg);
+    animation: nextPage $speed * 5 infinite $speed * -4.8 steps(1);
+    background-size: 420px 300px;
+    background-position: -2px -2px;
+  }
+  &:nth-child(4) {
+    transform: rotateX($bookAngle) rotateY(177deg);
+  }
+  &:nth-child(5) {
+    transform: rotateX($bookAngle) rotateY(175.5deg);
+  }
+  &:nth-child(6) {
+    transform: rotateX($bookAngle) rotateY(174deg);
+    overflow: hidden;
+    &::after {
+      content: "";
+      width: 210px;
+      height: 300px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform-origin: center;
+      transform: rotateY(180deg);
+      animation: nextPage $speed * 5 $speed * -4 infinite steps(1);
+      background-size: 420px 300px;
+      background-position: 100% -2px;
+    }
+  }
+  @keyframes nextPage {
+    @for $i from 0 through 4 {
+      #{$i * 20}% {
+        background-image: nth($images, ($i + 1));
+      }
+    }
+  }
+}
+.gap {
+  width: 10px;
+  height: 300px;
+  background: none;
+  transform: rotateX($bookAngle);
+  transform-origin: bottom;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 5px);
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: $borderColor;
+    width: 10px;
+    height: 5px;
+    border-radius: 50%;
+  }
+}
+.pages,
+.flips {
+  transform-style: preserve-3d;
+}
+.fouth__section___profile__button__wrapper {
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fouth__section___profile__button {
+  display: flex;
+  color: #ff0000;
+  font-size: 18px;
+  font-weight: bold;
+  width: fit-content;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 1em;
+}
+.flip {
+  width: 32px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  transform-origin: 100% 100%;
+  right: 100%;
+  border: solid $borderColor;
+  border-width: 2px 0;
+  perspective: 4200px;
+  perspective-origin: center;
+  transform-style: preserve-3d;
+  background-size: 420px 300px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    background-size: 420px 300px;
+  }
+  &.flip1 {
+    right: 50%;
+    animation: flip1 $speed infinite ease-in-out;
+    border-width: 2px 2px 2px 0;
+    &::after {
+      animation: nextFlip1 $speed * 5 $speed * -4 infinite steps(1);
+    }
+  }
+  &:not(.flip1) {
+    right: calc(100% - 2px);
+    top: -2px;
+    transform-origin: right;
+    animation: flip2 $speed ease-in-out infinite;
+  }
+  @for $i from 2 through 7 {
+    &.flip#{$i}::after {
+      animation: nextFlip#{$i}$speed * 5 $speed * -4 infinite steps(1);
+    }
+  }
+  &.flip7 {
+    width: 30px;
+    border-width: 2px 0 2px 2px;
+    &::after {
+      animation: nextFlip7 $speed * 5 $speed * -4 infinite steps(1);
+    }
+  }
+  @keyframes flip1 {
+    0%,
+    20% {
+      transform: rotateX($bookAngle) rotateY(6deg);
+    }
+    80%,
+    100% {
+      transform: rotateX($bookAngle) rotateY(174deg);
+    }
+  }
+  @keyframes flip2 {
+    0%,
+    20% {
+      transform: rotateY(0deg) translateY(0);
+    }
+    50% {
+      transform: rotateY(-15deg) translateY(0);
+    }
+  }
+}
+@keyframes nextFlip1 {
+  @for $i from 0 through 4 {
+    #{$i * 20}% {
+      background-image: nth($images, ($i + 1));
+      background-position: -178px -2px;
+      transform: rotateY(0deg);
+    }
+    #{10+($i * 20)}% {
+      background-image: nth($images, ($i + 2));
+      background-position: -210px -2px;
+      transform: rotateY(180deg);
+    }
+  }
+}
+@for $i from 2 through 6 {
+  @keyframes nextFlip#{$i} {
+    @for $j from 0 through 4 {
+      #{$j * 20}% {
+        background-image: nth($images, ($j + 1));
+        background-position: #{-148 + (($i - 2) * 30)}px -2px;
+        transform: rotateY(0deg);
+      }
+      #{((10 + ($j * 20)) + (($i - 1) * 0.5))}% {
+        background-image: nth($images, ($j + 2));
+        background-position: #{-238 - (($i - 2) * 30)}px -2px;
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}
+@keyframes nextFlip7 {
+  @for $i from 0 through 4 {
+    #{$i * 20}% {
+      background-image: nth($images, ($i + 1));
+      background-position: -2px -2px;
+      transform: rotateY(0deg);
+    }
+    #{13+($i * 20)}% {
+      background-image: nth($images, ($i + 2));
+      background-position: -388px -2px;
+      transform: rotateY(180deg);
+    }
+  }
+}
+@media (max-width: 1500px) {
+  .fouth__section___profile__button {
+    left: 40%;
+  }
+}
+@media (max-width: 1150px) {
+  .forthsectioncontainer {
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 2em;
+    border-radius: 4px;
+    height: 690px;
+    margin-top: -25px;
+    z-index: 6;
+  }
+  .fouth__section___profile__button {
+    left: 38%;
+  }
+}
+@media (max-width: 950px) {
+  .fouth__section___profile__button {
+    left: 33%;
+  }
+}
+@media (max-width: 650px) {
+  .fouth__section___profile__button {
+    left: 26%;
+  }
+}
+@media (max-width: 500px) {
+  .fouth__section___profile__button {
+    left: 23%;
+  }
+}
+@media (max-width: 450px) {
+  .forthsectioncontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fouth__section___profile__button {
+    left: auto;
+  }
+}
